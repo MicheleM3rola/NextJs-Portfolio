@@ -1,0 +1,134 @@
+.navbar {
+  width: 100%;
+  padding: 8px;
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  color: wheat;
+}
+
+.navBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.showNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: orange;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+}
+
+.change {
+  display: none;
+}
+
+.closeMenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menuList {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.menuList li {
+  font-size: 1.4rem;
+  padding-top: 20px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: 200;
+  transition: all 0.3s ease-in;
+}
+
+.menuList li:hover {
+  transform: scale(1.1);
+}
+
+.socialCtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  color: black;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-family: "Poppins";
+  font-weight: 200;
+  margin: 0;
+  color: orange;
+}
+
+@media screen and (min-width: 768px) {
+  .navCenter {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navBtn {
+    display: none;
+  }
+
+  .change {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    background-color: transparent;
+  }
+
+  .closeMenu {
+    display: none;
+  }
+  .menuList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: orange;
+  }
+
+  .menuList li {
+    padding-right: 15px;
+    padding-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .socialCtn {
+    display: none;
+  }
+
+  .logo h1 {
+    font-size: 3rem;
+  }
+}

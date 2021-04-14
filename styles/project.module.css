@@ -1,0 +1,256 @@
+.ctnProject {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 20px;
+}
+
+.introTitle {
+  font-size: 3rem;
+  font-family: "Poppins";
+  font-weight: 200;
+  color: orange;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+.introTitle::before {
+  content: "Best Of";
+  position: absolute;
+  bottom: 50px;
+
+  right: 150px;
+  color: aliceblue;
+}
+
+.githubTitle {
+  width: 100%;
+  font-size: 2.3rem;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 200;
+  color: aliceblue;
+
+  padding-top: 20px;
+}
+
+.ctnDisplayCards {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ctnCard {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  background-color: aliceblue;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2.8px 2.2px black, 0 15px 33.4px black;
+}
+
+.ctnImgSkills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctnDesc {
+  width: 100%;
+
+  background-color: #1b1f22;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imgProjects {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.techProjects {
+  flex: 1;
+  width: 100%;
+  padding-top: 15px;
+  background-color: #1b1f22;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imgSinglePro {
+  width: 100%;
+  height: 100%;
+}
+
+.skillsImgSide {
+  width: 60px;
+  height: 60px;
+}
+
+.innerDesc {
+  width: 100%;
+  height: 100px;
+  overflow-y: scroll;
+  color: aliceblue;
+  font-family: "Poppins";
+  font-weight: 200;
+  line-height: 20px;
+  padding: 8px;
+}
+
+.innerDesc::-webkit-scrollbar {
+  width: 3px; /* width of the entire scrollbar */
+}
+
+.innerDesc::-webkit-scrollbar-track {
+  background: #1b1f22; /* color of the tracking area */
+}
+
+.innerDesc::-webkit-scrollbar-thumb {
+  background-color: orange; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid orange; /* creates padding around scroll thumb */
+}
+
+.btnCallAction {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.BtnCall {
+  text-align: center;
+
+  color: orange;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  width: 25%;
+  font-family: "Poppins";
+  font-weight: 200;
+}
+
+@media screen and (min-width: 768px) {
+  .ctnProject {
+    width: 100%;
+    margin: auto;
+    height: auto;
+
+    margin-top: 110px;
+  }
+
+  .project {
+    justify-content: flex-end;
+    padding-left: 0;
+    margin-right: 30px;
+  }
+
+  .introTitle {
+    font-size: 4rem;
+  }
+  .introTitle::before {
+    bottom: 0px;
+    top: 20px;
+    right: 300px;
+  }
+
+  .githubTitle {
+    width: 100%;
+    font-size: 3.8rem;
+    padding-top: 0;
+    color: orange;
+    position: relative;
+    text-align: start;
+  }
+
+  .githubTitle::before {
+    content: "More Projects on Github";
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: aliceblue;
+  }
+
+  .ctnDisplayCards {
+    flex-direction: row;
+
+    gap: 10px;
+  }
+
+  .ctnCard {
+    width: 45%;
+    margin: 0;
+    border: none;
+  }
+
+  .ctnImgSkills {
+    flex-direction: row;
+  }
+
+  .imgProjects {
+    flex: 3;
+    height: 300px;
+  }
+
+  .techProjects {
+    flex: 1;
+
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btnCallAction {
+    margin-top: 0;
+  }
+
+  .BtnCall {
+    width: 18%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .ctnProject {
+    width: 90%;
+  }
+  .ctnCard {
+    width: 40%;
+    margin: 0;
+  }
+}

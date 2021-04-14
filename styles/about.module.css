@@ -1,0 +1,192 @@
+.outerAbout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.ctnAbout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.titleAbout {
+  width: 100%;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.titleAbout h1 {
+  font-size: 3rem;
+  font-family: "Poppins";
+  font-weight: 200;
+  position: relative;
+  z-index: 2;
+}
+
+.titleAbout h1::before {
+  content: "More..";
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: orange;
+  z-index: -1;
+}
+
+.ctnInnerAbout {
+  width: 100%;
+  margin-top: 30px;
+  padding: 70px 20px 70px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+  border-radius: 2%;
+  background-color: transparent;
+  box-shadow: 0 2.8px 2.2px orange, 0 15px 33.4px orange;
+  animation-name: test;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes test {
+  0% {
+    box-shadow: 0 2.8px 2.2px orange, 0 15px 33.4px orange;
+  }
+
+  100% {
+    box-shadow: 0 2.8px 2.2px lightcoral, 0 15px 33.4px lightcoral;
+  }
+}
+
+.skills {
+  width: 100%;
+}
+.rootSkills {
+  background-color: white;
+  flex: 1;
+  height: 40vh;
+  overflow-y: scroll;
+}
+.aboutDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutDesc h2 {
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+
+.aboutDesc h2 span {
+  font-family: "Poppins";
+
+  font-size: 2.5rem;
+  color: black;
+}
+
+.aboutDesc p {
+  font-family: "Poppins";
+  font-weight: 200;
+  line-height: 28px;
+  color: black;
+  text-align: center;
+}
+
+.aboutSkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.killsH1 {
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.pSkills {
+  font-family: "Poppins";
+  font-weight: 200;
+  line-height: 35px;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .ctnAbout {
+    width: 80%;
+    margin-top: 60px;
+  }
+
+  .titleAbout {
+    text-align: start;
+    padding: 10px;
+  }
+
+  .titleAbout h1 {
+    font-size: 4.5rem;
+  }
+
+  .ctnInnerAbout {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills {
+    width: 80%;
+  }
+
+  .rootSkills {
+    height: 30vh;
+  }
+
+  .aboutDesc {
+    width: 100%;
+  }
+
+  .aboutDesc p {
+    line-height: 35px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .ctnInnerAbout {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .skills {
+    width: 40%;
+  }
+  .aboutDesc {
+    width: 40%;
+  }
+  .aboutDesc {
+    align-items: flex-start;
+  }
+  .aboutDesc p {
+    text-align: start;
+  }
+
+  .killsH1 {
+    text-align: start;
+  }
+}

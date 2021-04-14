@@ -1,0 +1,194 @@
+.ctnContact {
+  width: 100%;
+
+  background-color: white;
+}
+
+.getInTouch {
+  width: 80%;
+  padding-left: 20px;
+  text-align: start;
+  font-size: 2.6rem;
+  font-weight: 200;
+  font-family: "Poppins";
+}
+
+.FormContainer {
+  display: flex;
+  width: 100%;
+
+  padding-top: 20px;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormControll {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textArea {
+  background-color: #040d21;
+  width: 100%;
+  color: orange;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  resize: none;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+}
+
+.textArea::placeholder {
+  color: orange;
+  opacity: 0.6;
+  text-align: center;
+  padding-top: 120px;
+  font-size: 2rem;
+}
+.textArea:focus::placeholder {
+  opacity: 0;
+}
+
+.btnBuzz {
+  width: 50%;
+  padding: 10px;
+  background-color: orange;
+  color: #040d21;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-family: "Poppins";
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.btnBuzz:hover {
+  transform: scale(1.1);
+}
+
+.drawImg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.drawImg::after {
+  content: "All My Contacts Below ";
+  position: absolute;
+  bottom: -40px;
+  font-size: 2rem;
+  font-family: "Poppins";
+  font-weight: 200;
+  text-decoration: underline orange 2px;
+}
+
+.ctnContact svg {
+  display: block;
+}
+
+.buzzNote {
+  font-size: 0.6rem;
+  font-family: "Poppins";
+  font-weight: 200;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 350px) {
+  .drawImg::after {
+    bottom: -70px;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .getInTouch {
+    margin: auto;
+    padding-left: 0;
+
+    font-size: 4rem;
+
+    border-bottom: 1px solid orange;
+  }
+
+  .FormContainer {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+
+    flex-direction: column;
+  }
+
+  .FormControll {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .textArea {
+    width: 100%;
+  }
+
+  .textArea::placeholder {
+    padding-top: 50px;
+    font-size: 3rem;
+  }
+
+  .btnBuzz {
+    width: 30%;
+
+    font-weight: 500;
+  }
+  .drawImg {
+    margin-bottom: 0;
+  }
+
+  .drawImg::after {
+    bottom: -70px;
+    font-size: 3.5rem;
+  }
+  .buzzNote {
+    font-size: 0.9rem;
+    font-family: "Poppins";
+    font-weight: 200;
+
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .FormContainer {
+    flex-direction: row;
+  }
+
+  .drawImg::after {
+    bottom: -70px;
+    font-size: 2.3rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .textArea {
+    width: 80%;
+  }
+
+  .drawImg::after {
+    bottom: -70px;
+    font-size: 3.5rem;
+  }
+}
