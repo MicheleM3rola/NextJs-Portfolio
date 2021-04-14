@@ -7,6 +7,31 @@ import { useMediaQuery } from "react-responsive";
 import { social } from "../utils";
 import { motion } from "framer-motion";
 
+const imageVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+
+    transition: {
+      duration: 2,
+    },
+  },
+};
+
+const titleDescVariant = {
+  hidden: {
+    x: 200,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 2 },
+  },
+};
+
 const Hero = () => {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 767px)",
@@ -16,9 +41,9 @@ const Hero = () => {
     <div className={heroStyles.ctn} id="home">
       <section className={heroStyles.desc}>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          initial="hidden"
+          animate="visible"
+          variants={imageVariant}
           className={heroStyles.picture}
         >
           {isMobile ? (
@@ -38,7 +63,12 @@ const Hero = () => {
           )}
         </motion.div>
 
-        <div className={heroStyles.innerDesc}>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={titleDescVariant}
+          className={heroStyles.innerDesc}
+        >
           <h1>Michele </h1>
           <p>
             Hi Folks Welcome to my Portfolio, My name is Michele and I am a
@@ -54,7 +84,10 @@ const Hero = () => {
           <div className={heroStyles.social}>
             {!isMobile
               ? social.map((icon, index) => (
-                  <a
+                  <motion.a
+                    whileHover={{
+                      scale: 1.1,
+                    }}
                     key={index}
                     href={icon.link}
                     target="_blank"
@@ -67,11 +100,11 @@ const Hero = () => {
                     }
                   >
                     {icon.icon}
-                  </a>
+                  </motion.a>
                 ))
               : null}
           </div>
-        </div>
+        </motion.div>
       </section>
       <Arrow />
     </div>

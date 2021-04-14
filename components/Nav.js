@@ -96,7 +96,7 @@ const Nav = () => {
               }}
             >
               <Link href="#home">
-                <motion.a>Home</motion.a>
+                <a>Home</a>
               </Link>
             </motion.li>
             <li>
