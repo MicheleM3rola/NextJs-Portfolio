@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import aboutStyles from "../styles/about.module.css";
 import AboutDesc from "./AboutDesc";
 import AboutSkills from "./AboutSkills";
 import { about } from "../utils";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+const titleAboutVariant = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 2 },
+  },
+};
 
 const About = () => {
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    return inView
+      ? animation.start(titleAboutVariant.visible)
+      : animation.start(titleAboutVariant.hidden);
+  }, [inView]);
+
   return (
     <div className={aboutStyles.outerAbout} id="about">
       <div className={aboutStyles.ctnAbout}>
-        <div className={aboutStyles.titleAbout}>
-          <h1>More..</h1>
-        </div>
+        <motion.div animate={animation} className={aboutStyles.titleAbout}>
+          <h1 ref={ref}>More..</h1>
+        </motion.div>
         <div className={aboutStyles.ctnInnerAbout}>
           <AboutDesc desc={about} />
           <AboutSkills skillTech={about} />
