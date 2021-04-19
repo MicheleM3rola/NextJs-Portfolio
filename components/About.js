@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import aboutStyles from "../styles/about.module.css";
 import AboutDesc from "./AboutDesc";
 import AboutSkills from "./AboutSkills";
 import { about } from "../utils";
-import { useInView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
 const titleAboutVariant = {
@@ -29,42 +29,50 @@ const constDescVariant = {
 };
 
 const About = () => {
-  const [ref, inView] = useInView();
-
   const animation = useAnimation();
   const descAnimation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start(titleAboutVariant.visible);
-      descAnimation.start(constDescVariant.visible);
-    } else if (!inView) {
-      animation.start(titleAboutVariant.hidden);
-      descAnimation.start(constDescVariant.hidden);
-    }
-  }, [inView]);
 
   return (
     <div className={aboutStyles.outerAbout} id="about">
       <div className={aboutStyles.ctnAbout}>
-        <motion.div animate={animation} className={aboutStyles.titleAbout}>
-          <h1 ref={ref}>More..</h1>
-        </motion.div>
+        <InView>
+          {({ inView, ref, entry }) => {
+            if (inView) {
+              animation.start(titleAboutVariant.visible);
+            } else if (!inView) {
+              animation.start(titleAboutVariant.hidden);
+            }
 
-        <motion.div
-          whileHover={{
-            scale: 1.1,
-            transition: {
-              duration: 1,
-            },
+            return (
+              <motion.div
+                animate={animation}
+                className={aboutStyles.titleAbout}
+              >
+                <h1 ref={ref}>More..</h1>
+              </motion.div>
+            );
           }}
-          ref={ref}
-          animate={descAnimation}
-          className={aboutStyles.ctnInnerAbout}
-        >
-          <AboutDesc desc={about} />
-          <AboutSkills skillTech={about} />
-        </motion.div>
+        </InView>
+
+        <InView>
+          {({ inView, ref, entry }) => {
+            if (inView) {
+              descAnimation.start(constDescVariant.visible);
+            } else if (!inView) {
+              descAnimation.start(constDescVariant.hidden);
+            }
+            return (
+              <motion.div
+                ref={ref}
+                animate={descAnimation}
+                className={aboutStyles.ctnInnerAbout}
+              >
+                <AboutDesc desc={about} />
+                <AboutSkills skillTech={about} />
+              </motion.div>
+            );
+          }}
+        </InView>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
