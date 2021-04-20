@@ -35,13 +35,13 @@ export const social = [
   },
 ];
 
-let desc = `Lorem Ipsum is simply dummy text of the printing and typesetting 
-  industry. Lorem Ipsum has been the industry's standard dummy text ever 
-  since the 1500s, when an unknown printer took a galley of type and s
-  crambled it to make a type specimen book. It has survived not 
-  only five centuries, but also the leap into electronic typesetting, 
-  remaining essentially unchanged. It was popularised in the 1960s with 
-  the release of Letraset sheets containing Lorem`;
+let desc = `I have been working for 3 years on my personal projects,
+my Skill set are listed beside, I have quite a bit of backed knowledge as well since I used
+node,express and MongoDB for some of my projects.
+I love coding and I am always very excited to learn new things which I think for a 
+developer is very important since tecnologies get updates very fast.
+
+`;
 
 export const about = {
   description: desc,

@@ -72,9 +72,7 @@ const Hero = () => {
           <h1>Michele </h1>
           <p>
             Hi Folks Welcome to my Portfolio, My name is Michele and I am a
-            Front-End developer specialized in React and Next.js. It's been 3
-            years since I started coding and I would love to jump in the
-            industry.
+            self-taught Front-End developer specialized in React and Next.js.
           </p>
           <span className={heroStyles.readMore}>
             <Link href="#about">
