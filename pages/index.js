@@ -34,7 +34,7 @@ export async function getServerSideProps() {
      }
      `
   );
-  const res = await fetch(`http://localhost:3000/api/github`);
+  const res = await fetch(`https://next-js-portfolios.vercel.app/api/github`);
   const data = await res.json();
 
   if (!data) {
