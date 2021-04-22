@@ -34,7 +34,7 @@ export async function getStaticProps() {
      }
      `
   );
-  const res = await fetch(`http://localhost:3000/api/github`);
+  const res = await fetch(`http://next-js-portfolio-app.vercel.app/api/github`);
   const data = await res.json();
 
   if (!data) {
