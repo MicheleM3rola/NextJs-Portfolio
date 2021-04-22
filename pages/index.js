@@ -22,7 +22,7 @@ const HomePgae = ({ card, data }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const card = await sanityClient.fetch(
     `*[_type == "card"]{
       title,
