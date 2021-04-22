@@ -39,7 +39,7 @@ let desc = `I have been working for 3 years on my personal projects,
 my Skill set are listed beside, I have quite a bit of backed knowledge as well since I used
 node,express and MongoDB for some of my projects.
 I love coding and I am always very excited to learn new things which I think for a 
-developer is very important since tecnologies get updates very fast.
+developer is very important since technologies get updates very fast.
 
 `;
 

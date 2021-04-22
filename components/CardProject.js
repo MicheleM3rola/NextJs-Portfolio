@@ -52,7 +52,7 @@ const CardProject = ({ cardData }) => {
                 {cardData.tech.map((skillImg, id) => (
                   <img
                     src={skillImg.mainImage.asset.url}
-                    key={id._id}
+                    key={id}
                     alt="skills"
                     className={projectStyles.skillsImgSide}
                   />
