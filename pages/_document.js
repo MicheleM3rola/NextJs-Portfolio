@@ -41,12 +41,7 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Portfolio Projects ShowCase for Front-End Web Development"
           />
-          <meta
-            name="twitter:image"
-            content={
-              `https://michele-merola.vercel.app/` + `/TwitterCardImg.jpg`
-            }
-          />
+          <meta name="twitter:image" content="/TwitterCardImg.jpg" />
         </Head>
 
         <body>
