@@ -41,7 +41,7 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Portfolio Projects ShowCase for Front-End Web Development"
           />
-          <meta name="twitter:image:src" content="/newPortfolio.jpg" />
+          <meta name="twitter:image:src" content="/1sX4Dp6I.jfif" />
         </Head>
 
         <body>
