@@ -34,13 +34,16 @@ class MyDocument extends Document {
 
           {/* twitter Card*/}
           <meta name="twitter:card" content="summary_large_image" />
+
           <meta name="twitter:site" content="@MicheleMerola15" />
           <meta name="twitter:title" content="Michele Portfolio" />
           <meta
             name="twitter:description"
             content="Portfolio Projects ShowCase for Front-End Web Development"
           />
-          <meta name="twitter:image" content="/newPortfolio.jpg" />
+          <meta name="twitter:image:src" content="/newPortfolio.jpg" />
+          <meta name="twitter:image:width" content="280" />
+          <meta name="twitter:image:height" content="480" />
         </Head>
 
         <body>
