@@ -15,7 +15,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,600&display=swap"
             rel="stylesheet"
           />
-          <link rel="icon" href="favicon.ico" />
+          <link rel="icon" href="favicon.png" />
         </Head>
 
         <body>
