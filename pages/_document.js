@@ -16,6 +16,31 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" href="favicon.png" />
+          {/*Facebook Card*/}
+
+          <meta
+            property="og:url"
+            content="https://michele-merola.vercel.app/"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Michele Portfolio" />
+          <meta
+            property="og:description"
+            content="Portfolio Projects ShowCase for Front-End Web Development"
+          />
+          <meta property="og:image" content="/newPortfolio.jpg" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="300" />
+
+          {/* twitter Card*/}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@MicheleMerola15" />
+          <meta name="twitter:title" content="Michele Portfolio" />
+          <meta
+            name="twitter:description"
+            content="Portfolio Projects ShowCase for Front-End Web Development"
+          />
+          <meta name="twitter:image" content="/newPortfolio.jpg" />
         </Head>
 
         <body>
