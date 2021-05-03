@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import contactStyles from "../styles/contact.module.css";
 import Image from "next/image";
 import emailjs from "emailjs-com";
@@ -40,6 +40,13 @@ const imgVariant = {
 };
 
 const Contact = () => {
+  const [email, setEmail] = useState(null);
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    return setEmail(e.target.value);
+  };
+
   const userId = process.env.NEXT_PUBLIC_USER_ID;
   const animation = useAnimation();
   const formAnimation = useAnimation();
@@ -47,16 +54,21 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm("gmail", "template_97u9men", e.target, userId).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    email
+      ? emailjs.sendForm("gmail", "template_97u9men", e.target, userId).then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        )
+      : setError("Please leave your Email before to send the buzz") &
+        setTimeout(() => {
+          setError("");
+        }, 2000);
     e.target.reset();
+    setEmail(null);
   };
 
   return (
@@ -98,16 +110,20 @@ const Contact = () => {
                 className={contactStyles.FormControll}
                 onSubmit={sendEmail}
               >
-                <p className={contactStyles.buzzNote}>
-                  Leave your Email in the Buzz and I will contact you as soon as
-                  possible
-                </p>
+                <input
+                  onChange={handleChange}
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className={contactStyles.buzzEmail}
+                />
+                <p className={contactStyles.buzzNote}>{error}</p>
                 <textarea
                   name="message"
                   rows="8"
                   className={`${contactStyles.textArea}`}
                   name="message"
-                  placeholder=" Give me a Buzz..."
+                  placeholder=" Your Message..."
                 ></textarea>
 
                 <button type="submit" className={contactStyles.btnBuzz}>

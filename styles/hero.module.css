@@ -120,6 +120,14 @@
 @media screen and (min-width: 1024px) {
   .picture {
     display: block;
+    border: 6px solid aliceblue;
+    border-radius: 10%;
+    transform: rotate(5deg);
+    transition: all 0.3s linear;
+  }
+
+  .picture:hover {
+    border: 2px solid lightblue;
   }
 
   .innerDesc {
@@ -135,5 +143,8 @@
     left: 300px;
 
     font-size: 8rem;
+  }
+  .innerDesc p {
+    margin-left: 5px;
   }
 }

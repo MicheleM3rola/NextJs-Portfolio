@@ -34,6 +34,31 @@
   align-items: center;
 }
 
+.buzzEmail {
+  background-color: #040d21;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: orange;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+}
+
+.buzzEmail::placeholder {
+  color: orange;
+  opacity: 0.6;
+  text-align: center;
+  padding-top: 120px;
+  font-size: 2rem;
+}
+
+.buzzEmail:focus::placeholder {
+  opacity: 0;
+}
+
 .textArea {
   background-color: #040d21;
   width: 100%;
@@ -105,7 +130,7 @@
   font-size: 0.6rem;
   font-family: "Poppins";
   font-weight: 200;
-
+  color: red;
   text-align: center;
 }
 
@@ -185,6 +210,9 @@
 @media screen and (min-width: 1500px) {
   .textArea {
     width: 80%;
+  }
+  .buzzEmail {
+    width: 50%;
   }
 
   .drawImg::after {

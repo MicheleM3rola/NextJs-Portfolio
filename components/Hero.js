@@ -10,12 +10,14 @@ import { motion } from "framer-motion";
 const imageVariant = {
   hidden: {
     opacity: 0,
+    rotate: 0,
   },
   visible: {
     opacity: 1,
+    rotate: "5deg",
 
     transition: {
-      duration: 2,
+      duration: 1,
     },
   },
 };
@@ -28,7 +30,7 @@ const titleDescVariant = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 2 },
+    transition: { duration: 1 },
   },
 };
 
@@ -57,10 +59,23 @@ const Hero = () => {
             <Image
               src="/Mike3.jpg"
               alt="Picture of the author"
-              width={400}
-              height={400}
+              className="photo"
+              width={350}
+              height={350}
             />
           )}
+          <style jsx global>{`
+            .photo {
+              border: 6px solid aliceblue;
+              border-radius: 10%;
+              transform: rotate(5deg);
+              transition: all 0.4s linear;
+            }
+            .photo:hover {
+              transform: rotate(0deg);
+            }
+          `}</style>
+          ;
         </motion.div>
 
         <motion.div
