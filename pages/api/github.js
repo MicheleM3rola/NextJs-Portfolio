@@ -5,7 +5,7 @@ export default async (req, res) => {
     auth: process.env.GITHUB_AUTH_TOKEN,
   });
 
-  const repos = await octokit.request("/users/NewbieWebDev/repos");
+  const repos = await octokit.request("/users/MicheleM3rola/repos");
 
   const reposData = repos.data;
 
