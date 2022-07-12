@@ -8,9 +8,9 @@ import { ImAddressBook } from "react-icons/im";
 export const social = [
   {
     name: "Github",
-    link: "https://github.com/NewbieWebDev",
+    link: "https://github.com/MicheleM3rola",
     icon: <AiFillGithub />,
-    nickname: "NewbieWebDev",
+    nickname: "MicheleM3rola",
   },
   {
     name: "Twitter",
@@ -75,8 +75,7 @@ export const contact = [
   },
   {
     address: "Rivervale WA",
-    link:
-      "https://www.google.com.au/maps/place/Rivervale+WA+6103/@-31.9614391,115.9049071,15z/data=!3m1!4b1!4m5!3m4!1s0x2a32bbbcf6520317:0x504f0b535df4fe0!8m2!3d-31.961762!4d115.9139219",
+    link: "https://www.google.com.au/maps/place/Rivervale+WA+6103/@-31.9614391,115.9049071,15z/data=!3m1!4b1!4m5!3m4!1s0x2a32bbbcf6520317:0x504f0b535df4fe0!8m2!3d-31.961762!4d115.9139219",
     icon: <ImAddressBook />,
     color: "red",
   },
